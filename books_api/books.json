@@ -1,0 +1,106 @@
+[
+    {
+        "isbn": "9780451524935",
+        "title": "1984",
+        "publisher": "Penguin Books Ltd",
+        "year_published": 1991,
+        "genre": "fiction",
+        "author": "George Orwell"
+    },
+    {
+        "isbn": "9780241251805",
+        "title": "Only Dull People Are Brilliant",
+        "publisher": "Penguin Books Ltd",
+        "year_published": 2016,
+        "genre": "lifestyle",
+        "author": "Oscar Wilde"
+    },
+    {
+        "isbn": "9780451526342",
+        "title": "Animal Farm",
+        "publisher": "Signet",
+        "year_published": 2004,
+        "genre": "fiction",
+        "author": "George Orwell"
+    },
+    {
+        "isbn": "9781785763687",
+        "title": "The Tattooist of Auschwitz",
+        "publisher": "Zaffre Publishing",
+        "year_published": 2018,
+        "genre": "fiction",
+        "author": "Heather Morris"
+    },
+    {
+        "isbn": "9781408883099",
+        "title": "The Tales of Beedle the Bard",
+        "publisher": "Bloomsbury Publishing Plc",
+        "year_published": 2017,
+        "genre": "fantasy",
+        "author": "J.K. Rowling"
+    },
+    {
+        "isbn": "9780063022706",
+        "title": "Strange Planet: Existence Chronicle",
+        "publisher": "Morrow Gift",
+        "year_published": 2020,
+        "genre": "sf",
+        "author": "Nathan W.Pyle"
+    },
+    {
+        "isbn": "9781471156267",
+        "title": "It Ends With Us",
+        "publisher": "Simon & Schuster",
+        "year_published": 2016,
+        "genre": "romance",
+        "author": "Coleen Hoover"
+    },
+    {
+        "isbn": "9781911630838",
+        "title": "Splash!: 10,000 Years of Swimming",
+        "publisher": "Atlantic Books",
+        "year_published": 2021,
+        "genre": "lifestyle",
+        "author": "Howard Means"
+    },
+    {
+        "isbn": "9781472269058",
+        "title": "Strange Planet",
+        "publisher": "Wildfire",
+        "year_published": 2021,
+        "genre": "comicbook",
+        "author": "Nathan W.Pyle"
+    },
+    {
+        "isbn": "9781506712499",
+        "title": "Cuphead Volume 2: Cartoon Chronicles & Calamities",
+        "publisher": "Dark Horse Comics,U.S.",
+        "year_published": 2021,
+        "genre": "comicbook",
+        "author": "Shawn Dickinson"
+    },
+    {
+        "isbn": "9781779501608",
+        "title": "Batman The Fall and the Fallen",
+        "publisher": "DC Comics",
+        "year_published": 2020,
+        "genre": "comicbook",
+        "author": "Tom King"
+    },
+    {
+        "isbn": "9781779506283",
+        "title": "Batman Creture of the Night",
+        "publisher": "DC Comics",
+        "year_published": 2021,
+        "genre": "comicbook",
+        "author": "Kurt Busiek"
+    },
+    {
+        "isbn": "9781302924379",
+        "title": "Spider-man Noir Twilight In Babylon",
+        "publisher": "DC Comics",
+        "year_published": 2020,
+        "genre": "comicbook",
+        "author": "Margaret Stohl"
+    }
+]

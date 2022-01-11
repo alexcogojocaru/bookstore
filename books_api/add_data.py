@@ -1,7 +1,7 @@
-from db_models import *
+from books_api.models import *
 import json
 
-books = json.load(open('books.json', 'r'))
+books = json.load(open('resources/books.json', 'r'))
 authors = { item['author']: [item['author'].split(' ')[0], item['author'].split(' ')[1]] for item in books }
 authors = { name: AuthorDB.create(firstname=authors[name][0], lastname=authors[name][1]) for name in authors.keys() }
 

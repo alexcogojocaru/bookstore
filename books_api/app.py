@@ -1,10 +1,23 @@
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from playhouse.shortcuts import model_to_dict
-from db_models import *
+from pydantic import BaseModel
 from models import *
 
+import fastapi
 import json
+import uvicorn
+
+class Book(BaseModel):
+    isbn: str
+    title: str
+    publisher: str
+    year: int
+    genre: str
+
+class Author(BaseModel):
+    firstname: str
+    lastname: str
 
 app = FastAPI()
 
@@ -47,7 +60,7 @@ class BooksAPI:
 
             return model_to_dict(bookdb)
         except:
-            raise HttpException(status.HTTP_404_NOT_FOUND)
+            raise fastapi.HttpException(status.HTTP_404_NOT_FOUND)
 
     @app.put('/api/bookcollection/books')
     async def add_book(book: Book):
@@ -60,7 +73,7 @@ class BooksAPI:
             book = BookDB.get(BookDB.isbn == isbn)
             book.delete_instance()
         except:
-            raise HttpException(status.HTTP_404_NOT_FOUND)
+            raise fastapi.HttpException(status.HTTP_404_NOT_FOUND)
 
 class AuthorsAPI:
     @app.get('/api/bookcollection/authors')
@@ -95,7 +108,7 @@ class AuthorsAPI:
 
             return model_to_dict(authordb)
         except:
-            raise HttpException(status.HTTP_404_NOT_FOUND)
+            raise fastapi.HttpException(status.HTTP_404_NOT_FOUND)
     
     @app.delete('/api/bookcollection/authors/{id}')
     async def delete_book(id: str):
@@ -103,7 +116,7 @@ class AuthorsAPI:
             author = AuthorDB.get(AuthorDB.id == id)
             author.delete_instance()
         except:
-            raise HttpException(status.HTTP_404_NOT_FOUND)
+            raise fastapi.HttpException(status.HTTP_404_NOT_FOUND)
 
 class BooksAuthorsAPI:
     @app.get('/api/bookcollection/books/{isbn}/authors')
@@ -114,4 +127,7 @@ class BooksAuthorsAPI:
 
             return model_to_dict(data.author)
         except:
-            raise HttpException(status.HTTP_404_NOT_FOUND)
+            raise fastapi.HttpException(status.HTTP_404_NOT_FOUND)
+
+if __name__ == '__main__':
+    uvicorn.run('app:app', host='0.0.0.0', port=8000, reload=True)

@@ -2,3 +2,4 @@ env/
 __pycache__
 .mvn/
 secure_auth/src/test
+node_modules/

@@ -36,6 +36,6 @@ class WebServiceConfig: WsConfigurerAdapter() {
 
     @Bean
     fun countriesSchema(): XsdSchema {
-        return SimpleXsdSchema(ClassPathResource("countries.xsd"))
+        return SimpleXsdSchema(ClassPathResource("auth.xsd"))
     }
 }

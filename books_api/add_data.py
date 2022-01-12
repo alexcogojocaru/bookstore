@@ -1,4 +1,4 @@
-from books_api.models import *
+from models import *
 import json
 
 books = json.load(open('resources/books.json', 'r'))

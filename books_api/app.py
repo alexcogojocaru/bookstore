@@ -1,21 +1,21 @@
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from playhouse.shortcuts import model_to_dict
-from pydantic import BaseModel
 from models import *
 
 import fastapi
 import json
+import pydantic
 import uvicorn
 
-class Book(BaseModel):
+class Book(pydantic.BaseModel):
     isbn: str
     title: str
     publisher: str
     year: int
     genre: str
 
-class Author(BaseModel):
+class Author(pydantic.BaseModel):
     firstname: str
     lastname: str
 
@@ -130,4 +130,4 @@ class BooksAuthorsAPI:
             raise fastapi.HttpException(status.HTTP_404_NOT_FOUND)
 
 if __name__ == '__main__':
-    uvicorn.run('app:app', host='0.0.0.0', port=8000, reload=True)
+    uvicorn.run('app:app', host='0.0.0.0', port=8000)

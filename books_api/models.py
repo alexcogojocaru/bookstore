@@ -2,9 +2,22 @@ from peewee import Model
 from peewee import CharField, TextField, IntegerField, ForeignKeyField
 from peewee import MySQLDatabase
 
+import os
+import time
 
-maria_db = MySQLDatabase('bookstore', user='root', password='pass', host='localhost', port=3306)
-maria_db.connect()
+MARIADB_HOST = os.environ.get('MARIADB_HOST')
+print(MARIADB_HOST)
+maria_db = MySQLDatabase('bookstore', user='root', password='pass', host=MARIADB_HOST, port=3306)
+is_connected = False
+
+while not is_connected:
+    try:
+        maria_db.connect()
+        is_connected = True
+    except:
+        pass
+    print('Trying to connect to MariaDB Server', flush=True)
+    time.sleep(2)
 
 class BaseModel(Model):
     class Meta:
